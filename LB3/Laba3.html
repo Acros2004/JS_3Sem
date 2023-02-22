@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab03</title>
+</head>
+<body>
+    
+    <script src="scriptForLab3.js"> </script>
+    <div class="article">
+        <h1>Акцентные кнопки</h1>
+        <form>
+        <button class="button1"><a href=" "></a></button>
+        <button class="button2"><a href=" "></a></button>
+        </form>
+        <h1>Акцентные ссылки</h1>
+        <a class="link1" href=" " text-decoration="none"></a>
+        <a class="link2" href=" "></a>
+        
+    </div>
+    <script>
+        var articleDiv1=document.querySelector("button.button1")
+        var articleDiv2=document.querySelector("button.button2")
+        var articleDiv3=document.querySelector("a.link1")
+        var articleDiv4=document.querySelector("a.link2")
+
+
+        let Button={
+        elem:document.createElement("elem"),
+        elemText:document.createTextNode("первая кнопка"),
+        elem1:document.createElement("elem"),
+        elemText1:document.createTextNode("вторая кнопка"),
+        }
+        let Link={
+        elem2:document.createElement("elem"),
+        elemText2:document.createTextNode("Первая ссылка"),
+        elem3:document.createElement("elem"),
+        elemText3:document.createTextNode("первая ссылка 2"),
+        }
+        let AccentElements={
+        backgroundColor:document.createElement("elem"),
+        Color:document.createElement("elem"),
+        }
+        Button.elem.appendChild(Button.elemText)
+        articleDiv1.appendChild(Button.elem)
+        articleDiv1.appendChild(AccentElements.backgroundColor)
+
+        AccentElements.backgroundColor.style.backgroundColor="yellow"
+        articleDiv1.style.backgroundColor=AccentElements.backgroundColor.style.backgroundColor
+        articleDiv1.style.width="400px"
+        articleDiv1.style.height="100px"
+        articleDiv1.style.padding="20px 30px 20px 30px"
+        Button.elem.style.color="blue"
+        Button.elem.style.fontSize="30px"
+
+
+        Button.elem1.appendChild(Button.elemText1)
+        articleDiv2.appendChild(Button.elem1)
+        articleDiv2.appendChild(AccentElements.backgroundColor)
+        AccentElements.backgroundColor.style.backgroundColor="yellow"
+        articleDiv2.style.backgroundColor=AccentElements.backgroundColor.style.backgroundColor
+        articleDiv2.style.width="400px"
+        articleDiv2.style.height="100px"
+        articleDiv2.style.padding="20px 30px 20px 30px"
+        articleDiv2.style.marginTop="10px"
+        Button.elem1.style.color="blue"
+        Button.elem1.style.fontSize="30px"
+
+
+        Link.elem2.appendChild(Link.elemText2)
+        articleDiv3.appendChild(Link.elem2)
+        articleDiv3.appendChild(AccentElements.Color)
+        AccentElements.Color.style.color="yellow"
+        Link.elem2.style.color=AccentElements.Color.style.color
+        Link.elem2.style.fontSize="50px"
+
+
+        Link.elem3.appendChild(Link.elemText3)
+        articleDiv4.appendChild(Link.elem3)
+        articleDiv4.appendChild(AccentElements.Color)
+        AccentElements.Color.style.color="yellow"
+        Link.elem3.style.color=AccentElements.Color.style.color
+        Link.elem3.style.fontSize="50px"
+        Link.elem3.style.marginLeft="100px"
+    </script>
+        
+</body>
+</html>
